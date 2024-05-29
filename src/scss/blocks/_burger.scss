@@ -1,0 +1,120 @@
+.burger {
+	position: relative;
+	width: 85px;
+	height: 56px;
+	background: var(--basic-red);
+	clip-path: polygon(20px 100%, 0 calc(100% - 20px), 0 0, 100% 0, 100% 100%);
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 20px 20px 0 0;
+		border-color: transparent transparent transparent white;
+	}
+}
+
+.burger__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	background: 0 0;
+	color: var(--page-bg);
+}
+
+.header__burger {
+	display: none;
+
+	.menu__list {
+		left: 100%;
+		display: none;
+	}
+
+	.burger__wrapper--js {
+		display: flex;
+		flex-direction: column;
+		height: unset;
+		left: 0;
+		overflow: unset;
+		transition: left 0.5s ease;
+		opacity: 1;
+		min-height: 100%;
+		z-index: 10;
+		position: absolute;
+		background-color: var(--page-bg);
+		width: 100%;
+
+		.menu__item {
+			padding: 20px;
+		}
+	}
+}
+
+.burger-menu__list {
+	padding: 30px 16px 0 16px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.burger__toggle {
+	position: relative;
+	display: inline-block;
+	width: 26px;
+	height: 2px;
+	vertical-align: bottom;
+	transition: background 0.7s 0.7s;
+	background-color: var(--page-bg);
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: var(--page-bg);
+		transition: top 0.5s 0.5s, transform 0.5s, -webkit-transform 0.5s;
+		transform-origin: 50% 50%;
+	}
+
+	&::before {
+		top: 8px;
+	}
+
+	&::after {
+		top: -8px;
+	}
+}
+
+.burger__open .burger__toggle {
+	background: 0 0;
+	transition: background 0.1s 0.1s;
+	z-index: 6;
+
+	&::after,
+	&::before {
+		transition: top 0.3s, transform 0.3s 0.5s;
+		width: 28px;
+		top: 0;
+		left: -5px;
+	}
+
+	&::before {
+		transform: rotate3d(0, 0, 1, 45deg);
+		background-color: var(--page-bg);
+	}
+
+	&::after {
+		transform: rotate3d(0, 0, 1, -45deg);
+		background-color: var(--page-bg);
+	}
+}

@@ -1,0 +1,16 @@
+.social__svg {
+	width: 30px;
+	height: 30px;
+}
+
+.social__list {
+	display: flex;
+}
+
+.social__item {
+	margin-right: 25px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}

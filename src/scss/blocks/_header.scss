@@ -1,0 +1,26 @@
+.header__nav{
+	border-bottom: 1px solid var(--border-header);
+}
+
+.header__bottom {
+	display: flex;
+}
+
+.header__inner {
+	display: flex;
+	align-items: center;
+	padding: 25px 0 32px 0;
+}
+
+.header__center {
+	display: flex;
+	align-items: center;
+	margin-left: 85px;
+	position: relative;
+}
+
+.header__social {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
