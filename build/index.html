@@ -286,7 +286,7 @@
 							<div class="poster__box">
 								<span class="poster__direction">направление</span>
 								<a class="poster__name" href="/" aria-label="Название события">
-									<strong class="poster__strong">Название события</strong>
+									<h3 class="poster__strong title__h3">Название события</h3>
 									<picture>
 										<source srcset="./img/poster__image--one.webp 1x, ./img/poster__image--one@2x.webp 2x" type="image/webp" />
 										<source srcset="./img/poster__image--one.png 1x, ./img/poster__image--one@2x.png 2x" type="image/png" />
@@ -307,6 +307,85 @@
 										</svg>
 									</div>
 								</a>
+							</div>
+						</article>
+
+						<article class="poster__card">
+							<strong class="poster__pegi">6+</strong>
+
+							<div class="poster__box">
+								<span class="poster__direction">кино</span>
+								<a class="poster__name" href="/" aria-label="Название события">
+									<h3 class="poster__strong title__h3">К/ф &#171;Маленькие волшебницы&#187;</h3>
+									<picture>
+										<source srcset="./img/poster__image--two.webp 1x, ./img/poster__image--two@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/poster__image--two.png 1x, ./img/poster__image--two@2x.png 2x" type="image/png" />
+										<img class="poster__image" src="./img/poster__image--two.png" alt="Баннер" />
+									</picture>
+								</a>
+							</div>
+
+							<div class="poster__general general">
+								<a class="general__link" href="/" target="_blank">
+									<div class="general__polygon">
+										<span class="general__sign">подробнее</span>
+									</div>
+
+									<div class="general__cursor">
+										<svg class="general__svg">
+											<use href="./img/svgsprite/sprite.symbol.svg#icon__cursor"></use>
+										</svg>
+									</div>
+								</a>
+								<button class="general__calendar" type="button" data-action="calendar">
+									<svg class="general__svg">
+										<use href="./img/svgsprite/sprite.symbol.svg#icon__calendar"></use>
+									</svg>
+								</button>
+							</div>
+
+							<div class="poster__background schedule">
+								<span class="poster__event">К/ф &#171;Маленькие волшебницы&#187;</span>
+								<form class="schedule__form" action="/" id="schedule-time" method="post">
+									<fieldset class="schedule__fieldset">
+										<legend class="schedule__legend">26.01.2021</legend>
+
+										<span class="schedule__span">
+											<input class="schedule__input visually-hidden" type="radio" value="2021-01-01T11:50" id="time__one" name="schedule" />
+											<label class="schedule__label" for="time__one">
+												11:50
+											</label>
+										</span>
+
+										<span class="schedule__span">
+											<input class="schedule__input visually-hidden" type="radio" value="2021-01-01T14:10" id="time__two" name="schedule" />
+											<label class="schedule__label" for="time__two">
+												14:10
+											</label>
+										</span>
+
+										<span class="schedule__span">
+											<input class="schedule__input visually-hidden" type="radio" value="2021-01-01T19:10" name="schedule" id="time__three" />
+
+											<label class="schedule__label" for="time__three">
+												19:10
+											</label>
+										</span>
+
+										<span class="schedule__span">
+											<input class="schedule__input visually-hidden" type="radio" value="2021-01-01T20:40" name="schedule" id="time__four" />
+											<label class="schedule__label" for="time__four">
+												20:40
+											</label>
+										</span>
+									</fieldset>
+								</form>
+
+								<button class="poster__close" type="button" aria-label="Закрыть раписание" data-action="close">
+									<svg class="poster__svg">
+										<use href="./img/svgsprite/sprite.symbol.svg#icon__delete"></use>
+									</svg>
+								</button>
 							</div>
 						</article>
 					</div>
