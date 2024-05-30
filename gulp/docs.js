@@ -28,7 +28,7 @@ const changed = require('gulp-changed');
 // Images
 const imagemin = require('gulp-imagemin');
 const imageminWebp = require('imagemin-webp');
-const extReplace = require('gulp-ext-replace');
+const rename = require('gulp-rename');
 
 // SVG
 const svgsprite = require('gulp-svg-sprite');
@@ -58,92 +58,110 @@ const plumberNotify = (title) => {
 };
 
 gulp.task('html:docs', function () {
-	return gulp
-		.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
-		.pipe(changed('./docs/'))
-		.pipe(plumber(plumberNotify('HTML')))
-		.pipe(fileInclude(fileIncludeSetting))
-		.pipe(
-			replace(
-				/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-				'$1./$4$5$7$1'
+	return (
+		gulp
+			// .src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+			.src([
+				'./src/html/**/*.html',
+				'!./**/blocks/**/*.*',
+				'!./src/html/docs/**/*.*',
+			])
+			.pipe(changed('./docs/'))
+			.pipe(plumber(plumberNotify('HTML')))
+			.pipe(fileInclude(fileIncludeSetting))
+			.pipe(
+				replace(/<img(?:.|\n|\r)*?>/g, function(match) {
+					return match
+						.replace(/\r?\n|\r/g, '')
+						.replace(/\s{2,}/g, ' ');
+				})
+			) //удаляет лишние пробелы и переводы строк внутри тега <img>
+			.pipe(
+				replace(
+					/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
+					'$1./$4$5$7$1'
+				)
 			)
-		)
-		.pipe(
-			typograf({
-				locale: ['ru', 'en-US'],
-				htmlEntity: { type: 'digit' },
-				safeTags: [
-					['<\\?php', '\\?>'],
-					['<no-typography>', '</no-typography>'],
-				],
-			})
-		)
-		.pipe(
-			webpHTML({
-				extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
-				retina: {
-					1: '',
-					2: '@2x',
-				},
-			})
-		)
-		.pipe(htmlclean())
-		.pipe(gulp.dest('./docs/'));
+			.pipe(
+				typograf({
+					locale: ['ru', 'en-US'],
+					htmlEntity: { type: 'digit' },
+					safeTags: [
+						['<\\?php', '\\?>'],
+						['<no-typography>', '</no-typography>'],
+					],
+				})
+			)
+			.pipe(
+				webpHTML({
+					extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
+					retina: {
+						1: '',
+						2: '@2x',
+					},
+				})
+			)
+			.pipe(htmlclean())
+			.pipe(gulp.dest('./docs/'))
+	);
 });
 
 gulp.task('sass:docs', function () {
-	return gulp
-		.src('./src/scss/*.scss')
-		.pipe(changed('./docs/css/'))
-		.pipe(plumber(plumberNotify('SCSS')))
-		.pipe(sourceMaps.init())
-		.pipe(autoprefixer())
-		.pipe(sassGlob())
-		.pipe(groupMedia())
-		.pipe(sass())
-		// .pipe(
-		// 	webImagesCSS({
-		// 		mode: 'webp',
-		// 	})
-		// )
-		.pipe(
-			replace(
-				/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-				'$1$2$3$4$6$1'
+	return (
+		gulp
+			.src('./src/scss/*.scss')
+			.pipe(changed('./docs/css/'))
+			.pipe(plumber(plumberNotify('SCSS')))
+			.pipe(sourceMaps.init())
+			.pipe(sassGlob()) /* Первый */
+			.pipe(sass()) /* Второй */
+			.pipe(autoprefixer()) /* После SASS обработка CSS */
+			.pipe(groupMedia())
+			// .pipe(
+			// 	webImagesCSS({
+			// 		mode: 'webp',
+			// 	})
+			// )
+			.pipe(
+				replace(
+					/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
+					'$1$2$3$4$6$1'
+				)
 			)
-		)
-		.pipe(csso())
-		.pipe(sourceMaps.write())
-		.pipe(gulp.dest('./docs/css/'));
+			.pipe(csso())
+			.pipe(sourceMaps.write())
+			.pipe(gulp.dest('./docs/css/'))
+	);
 });
 
 gulp.task('images:docs', function () {
-	return gulp
-		.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
-		.pipe(changed('./docs/img/'))
-		.pipe(
-			imagemin([
-				imageminWebp({
-					quality: 85,
-				}),
-			])
-		)
-		.pipe(extReplace('.webp'))
-		.pipe(gulp.dest('./docs/img/'))
-		.pipe(gulp.src('./src/img/**/*'))
-		.pipe(changed('./docs/img/'))
-		.pipe(
-			imagemin(
-				[
-					imagemin.gifsicle({ interlaced: true }),
-					imagemin.mozjpeg({ quality: 85, progressive: true }),
-					imagemin.optipng({ optimizationLevel: 5 }),
-				],
-				{ verbose: true }
+	return (
+		gulp
+			.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
+			.pipe(changed('./docs/img/'))
+			.pipe(
+				imagemin([
+					imageminWebp({
+						quality: 85,
+					}),
+				])
 			)
-		)
-		.pipe(gulp.dest('./docs/img/'));
+			.pipe(rename({ extname: '.webp' }))
+			.pipe(gulp.dest('./docs/img/'))
+			.pipe(gulp.src('./src/img/**/*'))
+			.pipe(changed('./docs/img/'))
+			.pipe(
+				imagemin(
+					[
+						imagemin.gifsicle({ interlaced: true }),
+						imagemin.mozjpeg({ quality: 85, progressive: true }),
+						imagemin.optipng({ optimizationLevel: 5 }),
+					],
+					{ verbose: true }
+				)
+			)
+			.pipe(gulp.dest('./docs/img/'))
+	);
 });
 
 const svgStack = {

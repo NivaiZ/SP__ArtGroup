@@ -15,6 +15,11 @@ const changed = require('gulp-changed');
 const typograf = require('gulp-typograf');
 const svgsprite = require('gulp-svg-sprite');
 const replace = require('gulp-replace');
+const webpHTML = require('gulp-webp-retina-html');
+const imageminWebp = require('imagemin-webp');
+const rename = require('gulp-rename');
+const prettier = require('@bdchauvette/gulp-prettier');
+
 
 gulp.task('clean:dev', function (done) {
 	if (fs.existsSync('./build/')) {
@@ -42,10 +47,19 @@ const plumberNotify = (title) => {
 
 gulp.task('html:dev', function () {
 	return gulp
-		.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
+		.src([
+			'./src/html/**/*.html',
+			'!./**/blocks/**/*.*',
+			'!./src/html/docs/**/*.*',
+		])
 		.pipe(changed('./build/', { hasChanged: changed.compareContents }))
 		.pipe(plumber(plumberNotify('HTML')))
 		.pipe(fileInclude(fileIncludeSetting))
+		.pipe(
+			replace(/<img(?:.|\n|\r)*?>/g, function(match) {
+				return match.replace(/\r?\n|\r/g, '').replace(/\s{2,}/g, ' ');
+			})
+		) //удаляет лишние пробелы и переводы строк внутри тега <img>
 		.pipe(
 			replace(
 				/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
@@ -60,6 +74,24 @@ gulp.task('html:dev', function () {
 					['<\\?php', '\\?>'],
 					['<no-typography>', '</no-typography>'],
 				],
+			})
+		)
+		.pipe(
+			webpHTML({
+				extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
+				retina: {
+					1: '',
+					2: '@2x',
+				},
+			})
+		)
+		.pipe(
+			prettier({
+				tabWidth: 4,
+				useTabs: true,
+				printWidth: 182,
+				trailingComma: 'es5',
+				bracketSpacing: false,
 			})
 		)
 		.pipe(gulp.dest('./build/'));
@@ -87,6 +119,17 @@ gulp.task('images:dev', function () {
 	return (
 		gulp
 			.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
+			.pipe(changed('./build/img/'))
+			.pipe(
+				imagemin([
+					imageminWebp({
+						quality: 85,
+					}),
+				])
+			)
+			.pipe(rename({ extname: '.webp' }))
+			.pipe(gulp.dest('./build/img/'))
+			.pipe(gulp.src(['./src/img/**/*', '!./src/img/svgicons/**/*']))
 			.pipe(changed('./build/img/'))
 			// .pipe(imagemin({ verbose: true }))
 			.pipe(gulp.dest('./build/img/'))

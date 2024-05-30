@@ -1,0 +1,90 @@
+.general__group {
+	font-size: 14px;
+	line-height: 21px;
+	margin:16px 0 32px 0;
+}
+
+.general__svg {
+	width: 24px;
+	height: 24px;
+	fill: var(--page-bg);
+}
+
+.general__sign {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 14px;
+	color: var(--page-bg);
+}
+
+.general__polygon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--text-color);
+	clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 20px, 100% 100%, 0 100%);
+	width: 145px;
+	padding: 20px 0 20px 0;
+}
+
+.general__cursor {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--basic-red);
+	width: 65px;
+	height: 56px;
+	clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+}
+
+.general__link {
+	display: flex;
+}
+
+.general-block__wrapper {
+	padding: 56px 0 39px 48px;
+}
+
+.general__flex {
+	display: flex;
+	position: relative;
+	background-color: var(--page-bg);
+}
+
+.general__image {
+	clip-path: polygon(0 12%, 44% 0, 100% 0, 100% 100%, 0% 100%);
+	min-height: 350px;
+	object-fit: contain;
+}
+
+.general__picture {
+	min-width: 599px;
+}
+
+.general__value {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--extra-red);
+	font-size: 36px;
+	line-height: 36px;
+	color: var(--page-bg);
+	font-weight: 900;
+	width: 181px;
+	height: 119px;
+	clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+}
+
+.general__block {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	width: 240px;
+	height: 175px;
+	background-color: var(--text-color);
+	position: absolute;
+	right: 40%;
+	top: 50%;
+	clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 20px, 100% 100%, 0 100%);
+}

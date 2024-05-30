@@ -26,6 +26,10 @@
 	// height: inherit;
 }
 
+.dropdown__wrapper {
+	position: relative;
+}
+
 .dropdown__visible {
 	opacity: 1;
 	visibility: visible;
@@ -33,7 +37,9 @@
 	height: auto;
 	padding: 10px 30px 10px 15px;
 	position: absolute;
-	width: 100%;
+	width: 150px;
+	clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+	z-index: 2;
 }
 
 .dropdown__svg {
@@ -44,6 +50,7 @@
 	background-color: var(--basic-red);
 	padding: 20px 0 20px;
 	color: var(--page-bg);
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 
 	.dropdown__svg {
 		transform: rotate(180deg);

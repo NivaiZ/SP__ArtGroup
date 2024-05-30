@@ -40,12 +40,38 @@
                         </button>
                     </li>
 
-                    <li class="menu__contacts-point">
-                        <button class="menu__contacts-button" title="Поиск по сайту" aria-label="Поиск по сайту">
+                    <li class="menu__contacts-point menu__contacts-search">
+                        <button class="menu__contacts-button" title="Поиск по сайту" aria-label="Поиск по сайту" data-action="search">
                             <svg class="menu__icon menu__icon-search">
                                 <use href="./img/svgsprite/sprite.symbol.svg#icon__search"></use>
                             </svg>
                         </button>
+
+                        <div class='menu__search'>
+                            <form class='menu__form' action="/search" id='top-form' method="GET">
+                                <input class='menu__input' type="text" aria-label='Поиск' id='search-form' placeholder='Поиск' name="query">
+                                <label class='menu__label visually-hidden' for='search-form'>Поиск по сайту</label>
+                                
+                                <ul class='menu__group'>
+                                    <li class="menu__group-item">
+                                        <button class='menu__delete' type='button' aria-label='Удаление'>
+                                            <svg class="menu__delete-svg">
+                                                <use href="./img/svgsprite/sprite.symbol.svg#icon__delete"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                        
+                                    <li class="menu__group-item">
+                                        <button class='menu__search-button' type='submit' aria-label='Отправка'>
+                                            <svg class="menu__search-svg">
+                                                <use href="./img/svgsprite/sprite.symbol.svg#icon__search--modal"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        
                     </li>
                 </ul>
             </div>
@@ -171,7 +197,7 @@
         <ul class='social__list'>
             <li class="social__item">
                 <a class='social__link' href="/">
-                    <svg class="social__svg">
+                    <svg class="social__svg social__svg--rutube">
                         <use href="./img/svgsprite/sprite.symbol.svg#icon__rutube"></use>
                     </svg>
                 </a>

@@ -1,16 +1,18 @@
 export default function dropDownMenu() {
-	const dropDownButton = document.querySelectorAll('[data-action="dropdown"]')
-	const dropDownList = document.querySelectorAll('[data-action="dropdown__visible"]')
+  const dropDownWrappers = document.querySelectorAll('.dropdown__wrapper');
 
-	if (dropDownButton) {
-		for (let i = 0; i < dropDownButton.length; i++) {
-			const elementButton = dropDownButton[i]
-			const elementList = dropDownList[i]
+  dropDownWrappers.forEach(wrapper => {
+    const dropDownButton = wrapper.querySelector('[data-action="dropdown"]');
+    const dropDownList = wrapper.querySelector('[data-action="dropdown__visible"]');
 
-			elementButton.addEventListener('mouseenter', () => {
-				elementList.classList.toggle('dropdown__visible')
-				elementButton.classList.toggle('dropdown__name--js')
-			})
-		}
-	}
+    wrapper.addEventListener('mouseenter', () => {
+      dropDownList.classList.add('dropdown__visible');
+      dropDownButton.classList.add('dropdown__name--js');
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      dropDownList.classList.remove('dropdown__visible');
+      dropDownButton.classList.remove('dropdown__name--js');
+    });
+  });
 }
