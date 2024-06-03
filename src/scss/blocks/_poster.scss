@@ -29,6 +29,7 @@
 	max-width: 270px;
 	background-color: var(--page-bg);
 	padding: 27px 0 27px 0;
+	clip-path: polygon(100% 0, 100% calc(100% - 122px), calc(100% - 10px) calc(100% - 96px), 100% calc(100% - 75px), 100% 100%, 0 100%, 0 0);
 }
 
 .poster__pegi {
@@ -107,7 +108,18 @@
 		height: 100%;
 		position: absolute;
 		top: 0;
-		clip-path: polygon(0 25%, 4% 14%, 0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 4% 36%);
+		clip-path: polygon(
+			0 0, 
+			0 calc(50% - 61px), /* Новый разрыв чуть выше центра */
+			10px calc(50% - 45px), 
+			0 calc(50% - 30px), 
+			0 calc(100% - 122px), 
+			10px calc(100% - 96px), 
+			0 calc(100% - 75px), 
+			0 100%, 
+			100% 100%, 
+			100% 0
+	);
 		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 		padding: 24px 19px 0 24px;
 }
@@ -139,4 +151,8 @@
 	display: grid;
 	grid-template-columns: minmax(270px, max-content) repeat(auto-fill, 270px);
 	gap: 30px;
+}
+
+.poster__card-corner {
+	clip-path: unset;
 }
