@@ -24,7 +24,7 @@
 .menu__contacts-item {
 	display: flex;
 	align-items: center;
-	margin-right: 70px;
+	margin-right: 48px;
 
 	&:last-child {
 		margin-right: 0;
@@ -34,7 +34,6 @@
 .menu__contacts {
 	display: flex;
 	justify-content: space-between;
-	padding: 17px 0 12px 0;
 }
 
 .menu__logo {
@@ -84,8 +83,8 @@
 }
 
 .menu__icon-search {
-	stroke: var(--text-color);
-	fill: none;
+	fill: transparent;
+	stroke: var(--page-bg);
 }
 
 .menu__contacts-items {
@@ -160,4 +159,11 @@
 
 .menu__delete-visible {
 	display: inline-block;
+}
+
+.menu__contacts-button--background {
+	width: 56px;
+	height: 42px;
+	background-color: var(--text-color);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 25px, 48px 100%, 0 100%);
 }

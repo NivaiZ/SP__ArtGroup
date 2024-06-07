@@ -41,14 +41,14 @@
                     </li>
 
                     <li class="menu__contacts-point menu__contacts-search">
-                        <button class="menu__contacts-button" title="Поиск по сайту" aria-label="Поиск по сайту" data-action="search">
+                        <button class="menu__contacts-button menu__contacts-button--background" title="Поиск по сайту" aria-label="Поиск по сайту" data-action="search">
                             <svg class="menu__icon menu__icon-search">
                                 <use href="./img/svgsprite/sprite.symbol.svg#icon__search"></use>
                             </svg>
                         </button>
 
                         <div class='menu__search'>
-                            <form class='menu__form' action="/search" id='top-form' method="GET">
+                            <form class='menu__form' action="/search" id='top-form' method="GET" name='search__header'>
                                 <input class='menu__input' type="text" aria-label='Поиск' id='search-form' placeholder='Поиск' name="query">
                                 <label class='menu__label visually-hidden' for='search-form'>Поиск по сайту</label>
                                 

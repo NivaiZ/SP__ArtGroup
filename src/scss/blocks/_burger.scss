@@ -3,7 +3,7 @@
 	width: 85px;
 	height: 56px;
 	background: var(--basic-red);
-	clip-path: polygon(20px 100%, 0 calc(100% - 20px), 0 0, 100% 0, 100% 100%);
+	clip-path: polygon(0 0, 100% 0%, 100% 100%, 8px 100%, 0% calc(100% - 18px));
 	overflow: hidden;
 
 	&::after {

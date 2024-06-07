@@ -1,19 +1,19 @@
 import Swiper from "swiper/bundle"
 import "swiper/css/bundle"
 
-export default function newsSlider () {
-	const swiperExist = document.querySelector('.news__slider');
+export default function newsSlider() {
+	const swiperExist = document.querySelector('.news__slider')
 
-	if(swiperExist) {
+	if (swiperExist) {
 		const swiper = new Swiper(swiperExist, {
 			slidesPerView: 4,
 			spaceBetween: 30,
-      scrollbar: {
-        el: ".swiper-scrollbar",
+			scrollbar: {
+				el: ".news__scrollbar.swiper-scrollbar",
 				dragSize: 'auto',
 				draggable: true,
 				snapOnRelease: true,
-      },
-    });
+			},
+		})
 	}
 }

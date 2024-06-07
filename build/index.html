@@ -51,14 +51,14 @@
 							</li>
 
 							<li class="menu__contacts-point menu__contacts-search">
-								<button class="menu__contacts-button" title="Поиск по сайту" aria-label="Поиск по сайту" data-action="search">
+								<button class="menu__contacts-button menu__contacts-button--background" title="Поиск по сайту" aria-label="Поиск по сайту" data-action="search">
 									<svg class="menu__icon menu__icon-search">
 										<use href="./img/svgsprite/sprite.symbol.svg#icon__search"></use>
 									</svg>
 								</button>
 
 								<div class="menu__search">
-									<form class="menu__form" action="/search" id="top-form" method="GET">
+									<form class="menu__form" action="/search" id="top-form" method="GET" name="search__header">
 										<input class="menu__input" type="text" aria-label="Поиск" id="search-form" placeholder="Поиск" name="query" />
 										<label class="menu__label visually-hidden" for="search-form">Поиск по&#160;сайту</label>
 
@@ -239,11 +239,11 @@
 						</div>
 
 						<a class="general__link" href="/" target="_blank">
-							<div class="general__polygon">
+							<div class="general__polygon general__polygon-banner">
 								<span class="general__sign">подробнее</span>
 							</div>
 
-							<div class="general__cursor">
+							<div class="general__cursor general__cursor-banner">
 								<svg class="general__svg">
 									<use href="./img/svgsprite/sprite.symbol.svg#icon__cursor"></use>
 								</svg>
@@ -297,11 +297,11 @@
 
 							<div class="poster__general general">
 								<a class="general__link" href="/" target="_blank">
-									<div class="general__polygon">
+									<div class="general__polygon general__polygon-poster">
 										<span class="general__sign">подробнее</span>
 									</div>
 
-									<div class="general__cursor">
+									<div class="general__cursor general__cursor-poster">
 										<svg class="general__svg">
 											<use href="./img/svgsprite/sprite.symbol.svg#icon__cursor"></use>
 										</svg>
@@ -327,11 +327,11 @@
 
 							<div class="poster__general general">
 								<a class="general__link" href="/" target="_blank">
-									<div class="general__polygon">
+									<div class="general__polygon general__polygon-poster">
 										<span class="general__sign">подробнее</span>
 									</div>
 
-									<div class="general__cursor">
+									<div class="general__cursor general__cursor-poster">
 										<svg class="general__svg">
 											<use href="./img/svgsprite/sprite.symbol.svg#icon__cursor"></use>
 										</svg>
@@ -346,7 +346,7 @@
 
 							<div class="poster__background schedule">
 								<span class="poster__event">К/ф &#171;Маленькие волшебницы&#187;</span>
-								<form class="schedule__form" action="/" id="schedule-time" method="post">
+								<form class="schedule__form" action="/" id="schedule-time" method="post" name="schedule-form__wizards">
 									<fieldset class="schedule__fieldset">
 										<legend class="schedule__legend">26.01.2021</legend>
 
@@ -406,11 +406,11 @@
 
 							<div class="poster__general general">
 								<a class="general__link" href="/" target="_blank">
-									<div class="general__polygon">
+									<div class="general__polygon general__polygon-poster">
 										<span class="general__sign">подробнее</span>
 									</div>
 
-									<div class="general__cursor">
+									<div class="general__cursor general__cursor-poster">
 										<svg class="general__svg">
 											<use href="./img/svgsprite/sprite.symbol.svg#icon__cursor"></use>
 										</svg>
@@ -436,11 +436,11 @@
 
 							<div class="poster__general general">
 								<a class="general__link" href="/" target="_blank">
-									<div class="general__polygon">
+									<div class="general__polygon general__polygon-poster">
 										<span class="general__sign">подробнее</span>
 									</div>
 
-									<div class="general__cursor">
+									<div class="general__cursor general__cursor-poster">
 										<svg class="general__svg">
 											<use href="./img/svgsprite/sprite.symbol.svg#icon__cursor"></use>
 										</svg>
@@ -508,6 +508,83 @@
 						</div>
 						<div class="news__scrollbar swiper-scrollbar"></div>
 					</div>
+				</div>
+			</section>
+			<section class="gallery-block">
+				<div class="container">
+					<div class="gallery-block__news news">
+						<div class="news__inner news__inner-gallery">
+							<div class="news__empty"></div>
+							<h2 class="news__heading title__h1">Галерея</h2>
+							<a class="news__link news__link-item" href="/" aria-label="Смотреть всё">Смотреть всё</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery-block__slider swiper">
+					<div class="gallery-block__wrapper swiper-wrapper">
+						<div class="gallery-block__slide swiper-slide">
+							<figure class="gallery-block__figure">
+								<div class="gallery-block__box">
+									<picture>
+										<source srcset="./img/gallery-image__one.webp 1x, ./img/gallery-image__one@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/gallery-image__one.png 1x, ./img/gallery-image__one@2x.png 2x" type="image/png" />
+										<img class="gallery-block__img" src="./img/gallery-image__one.png" alt="первое изображение" />
+									</picture>
+								</div>
+							</figure>
+						</div>
+
+						<div class="gallery-block__slide swiper-slide">
+							<figure class="gallery-block__figure">
+								<div class="gallery-block__box">
+									<picture>
+										<source srcset="./img/gallery-image__two.webp 1x, ./img/gallery-image__two@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/gallery-image__two.png 1x, ./img/gallery-image__two@2x.png 2x" type="image/png" />
+										<img class="gallery-block__img" src="./img/gallery-image__two.png" alt="первое изображение" />
+									</picture>
+								</div>
+							</figure>
+						</div>
+
+						<div class="gallery-block__slide swiper-slide">
+							<figure class="gallery-block__figure">
+								<div class="gallery-block__box">
+									<picture>
+										<source srcset="./img/gallery-image__three.webp 1x, ./img/gallery-image__three@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/gallery-image__three.png 1x, ./img/gallery-image__three@2x.png 2x" type="image/png" />
+										<img class="gallery-block__img" src="./img/gallery-image__three.png" alt="первое изображение" />
+									</picture>
+								</div>
+							</figure>
+						</div>
+
+						<div class="gallery-block__slide swiper-slide">
+							<figure class="gallery-block__figure">
+								<div class="gallery-block__box">
+									<picture>
+										<source srcset="./img/gallery-image__four.webp 1x, ./img/gallery-image__four@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/gallery-image__four.png 1x, ./img/gallery-image__four@2x.png 2x" type="image/png" />
+										<img class="gallery-block__img" src="./img/gallery-image__four.png" alt="первое изображение" />
+									</picture>
+								</div>
+							</figure>
+						</div>
+
+						<div class="gallery-block__slide swiper-slide">
+							<figure class="gallery-block__figure">
+								<div class="gallery-block__box">
+									<picture>
+										<source srcset="./img/gallery-image__five.webp 1x, ./img/gallery-image__five@2x.webp 2x" type="image/webp" />
+										<source srcset="./img/gallery-image__five.png 1x, ./img/gallery-image__five@2x.png 2x" type="image/png" />
+										<img class="gallery-block__img" src="./img/gallery-image__five.png" alt="первое изображение" />
+									</picture>
+								</div>
+							</figure>
+						</div>
+					</div>
+
+					<div class="gallery-block__scrollbar swiper-scrollbar"></div>
 				</div>
 			</section>
 		</main>
