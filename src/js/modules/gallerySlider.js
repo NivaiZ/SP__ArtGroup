@@ -7,12 +7,13 @@ export default function gallerySlider () {
 	if (swiperElemenet) {
 		const swiper = new Swiper(swiperElemenet, {
 			slidesPerView: 4.79,
-      scrollbar: {
-        el: ".gallery-block__scrollbar.swiper-scrollbar",
-				dragSize: 'auto',
+
+			scrollbar: {
+				el: ".gallery-block__scrollbar.swiper-scrollbar",
+				dragSize: 10,
 				draggable: true,
 				snapOnRelease: true,
-      },
+			},
 		});
 	}
 }
