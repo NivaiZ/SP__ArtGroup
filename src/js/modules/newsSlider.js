@@ -8,6 +8,8 @@ export default function newsSlider() {
 		const swiper = new Swiper(swiperExist, {
 			slidesPerView: 4,
 			spaceBetween: 30,
+			freeMode: true,
+      watchSlidesProgress: true,
 			scrollbar: {
 				el: ".news__scrollbar.swiper-scrollbar",
 				dragSize: 'auto',

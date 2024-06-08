@@ -2,6 +2,7 @@ import burgerMenu from './modules/burger'
 import dropDownMenu from './modules/dropdown'
 import gallerySlider from './modules/gallerySlider'
 import newsSlider from './modules/newsSlider'
+import partnersSlider from './modules/partnersSlider'
 import hoverPosterCard from './modules/posterCard'
 import searchModal from './modules/search'
 
@@ -12,6 +13,7 @@ function handleDOMContentLoaded() {
 	hoverPosterCard();
 	newsSlider();
 	gallerySlider();
+	partnersSlider();
 	// useDynamicAdapt("max")
 }
 
