@@ -68,4 +68,11 @@
 	position: absolute;
 	z-index: 3;
 	top: 50%;
+
+	&:hover {
+		.partners__svg {
+			transition: 0.5s ease;
+			fill: var(--basic-red);
+		}
+	}
 }

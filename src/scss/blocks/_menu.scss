@@ -14,6 +14,11 @@
 	line-height: 14px;
 	text-decoration: none;
 	color: var(--text-color);
+	transition: 0.5s ease;
+
+	&:hover {
+		color: var(--basic-red);
+	}
 }
 
 .menu__contacts-list {
@@ -51,14 +56,14 @@
 	background-color: var(--text-color);
 	width: 133px;
 	height: 56px;
-	clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 20px, 100% 100%, 0 100%);
+	clip-path: polygon(calc(100% - 26px) 0%, 100% 9px, 100% 100%, 0 100%, 0 0);
 }
 
 .menu__polygon--right {
 	width: 66px;
 	height: 56px;
 	background-color: var(--extra-red);
-	clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+	clip-path: polygon(26px 0%, 100% 0, 100% 100%, 0 100%, 0 9px);
 }
 
 .menu__name {
@@ -164,9 +169,24 @@
 	display: inline-block;
 }
 
+.menu__contacts-button {
+
+	&:hover {
+		.menu__icon-eye {
+			transition: fill 0.5s ease;
+			fill: var(--basic-red);
+		}
+	}
+}
+
 .menu__contacts-button--background {
 	width: 56px;
 	height: 42px;
 	background-color: var(--text-color);
 	clip-path: polygon(0% 0%, 100% 0%, 100% 25px, 48px 100%, 0 100%);
+
+	&:hover {
+		background-color: var(--basic-red);
+		transition: background 0.5s ease;
+	}
 }

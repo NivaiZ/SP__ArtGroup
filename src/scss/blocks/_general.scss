@@ -39,6 +39,14 @@
 
 .general__link {
 	display: flex;
+
+	&:hover {
+		.general__polygon-banner {
+			transition: 0.5s ease;
+			background-color: var(--basic-red);
+			clip-path: polygon(calc(100% - 28px) 0%, 100% 11px, 100% 100%, 0 100%, 0 0);
+		}
+	}
 }
 
 .general-block__wrapper {
