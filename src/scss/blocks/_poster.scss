@@ -164,3 +164,31 @@
 .poster__heading {
 	margin-right: 66px;
 }
+
+@media (max-width: 1440px) {
+	.poster__article {
+		display: flex;
+		gap: unset;
+		width: 100vh;
+		// overflow-y: hidden;
+		// overflow-x: scroll;
+	}
+
+	.poster__container {
+		overflow-y: hidden;
+		overflow-x: scroll;
+	}
+
+	.poster__card {
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.poster__image {
+		width: unset;
+		height: unset;
+		max-width: unset;
+	}
+}

@@ -64,3 +64,9 @@
 	font-weight: 700;
 	color: var(--page-bg);
 }
+
+@media (max-width: 1440px) {
+	.dropdown__name {
+		min-width: 87px;
+	}
+}

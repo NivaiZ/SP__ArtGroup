@@ -66,6 +66,7 @@
 }
 
 .general__picture {
+	position: relative;
 	min-width: 599px;
 }
 
@@ -92,7 +93,7 @@
 	height: 175px;
 	background-color: var(--text-color);
 	position: absolute;
-	right: 42.5%;
+	left: -140px;
 	top: 50%;
 	clip-path: polygon(calc(100% - 49px) 0%, 100% 24px, 100% 100%, 0 100%, 0 0);
 }
@@ -115,4 +116,28 @@
 .general__polygon-poster {
 	width: 100%;
 	height: 40px;
+}
+
+@media (max-width: 1440px) {
+	.general__picture {
+		min-width: unset;
+		width: 100%;
+	}
+
+	.general__block {
+		width: 168px;
+		height: 123px;
+		bottom: 0;
+		top: unset;
+	}
+
+	.general__value {
+		width: 128px;
+		height: 84px;
+	}
+
+	.general__image {
+		min-height: 350px;
+    object-fit: cover;
+	}
 }

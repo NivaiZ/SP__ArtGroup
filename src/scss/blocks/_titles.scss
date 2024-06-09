@@ -22,3 +22,10 @@
 	font-weight: 700;
 	font-family: var(--font-titles);
 }
+
+@media (max-width: 1440px) {
+	.title__h1 {
+		font-size: 30px;
+		line-height: 30px;
+	}
+}

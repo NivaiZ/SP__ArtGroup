@@ -12,12 +12,24 @@ export default function newsSlider() {
 			watchSlidesProgress: true,
 			slidesPerGroup: 1,
 			loop: false,
+
+			breakpoints: {
+				1439: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+				1440: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				}
+			},
 			scrollbar: {
 				el: ".news__scrollbar.swiper-scrollbar",
 				dragSize: 1,
 				draggable: true,
 				snapOnRelease: true,
 			},
+
 		})
 	}
 }
