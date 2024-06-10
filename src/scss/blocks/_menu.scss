@@ -190,3 +190,29 @@
 		transition: background 0.5s ease;
 	}
 }
+
+@media (max-width: 1440px) {
+	.menu__contacts {
+		padding: 0 24px 0 24px;
+	}
+
+	.menu__contacts-item {
+		margin-right: 27px;
+	}
+
+	.menu__picture {
+		margin-left: 15px;
+	}
+
+	.menu__polygon--left {
+		width: 124px;
+	}
+
+	.menu__polygon--right {
+		height: 50px;
+	}
+
+	.menu__polygon--left {
+		height: 50px;
+	}
+}

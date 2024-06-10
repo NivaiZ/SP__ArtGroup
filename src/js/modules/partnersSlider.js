@@ -1,18 +1,33 @@
 import Swiper from "swiper/bundle"
 import "swiper/css/bundle"
 
-export default function partnersSlider () {
-	const swiperElement = document.querySelector('.partners__slider')
+export default function partnersSlider() {
+  const swiperElement = document.querySelector('.partners__slider')
 
-	if (swiperElement) {
-		const swiper = new Swiper(swiperElement, {
+  if (swiperElement) {
+    const swiper = new Swiper(swiperElement, {
       slidesPerView: 4,
-			spaceBetween: 30,
+      spaceBetween: 30,
+
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          grid: {
+            rows: 2,
+            fill: "row",
+          },
+        },
+
+        1440: {
+          slidesPerView: 4,
+        },
+      },
+
       navigation: {
         nextEl: ".partners__group-button.partners__group-button-next",
         prevEl: ".partners__group-button.partners__group-button-prev",
       },
-    });
-	}
+    })
+  }
 
 }

@@ -12,3 +12,23 @@
 	font-weight: 400;
 	padding: 17px 0 17px 0;
 }
+
+.footer__copyright {
+	font-size: 14px;
+	line-height: 14px;
+}
+
+@media (max-width: 1440px) {
+	.footer__wrapper {
+		padding: 17px 24px 17px 24px;
+	}
+
+	.footer__copyright {
+		font-size: 13px;
+		line-height: 13px;
+	}
+
+	.footer__author {
+		white-space: pre;
+	}
+}

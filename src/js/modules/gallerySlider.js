@@ -14,6 +14,18 @@ export default function gallerySlider () {
 				draggable: true,
 				snapOnRelease: true,
 			},
+			breakpoints: {
+				320: {
+					slidesPerView: 2.1,
+					grid: {
+						rows: 2,
+						fill: "row",
+					},
+				},
+				1440: {
+					slidesPerView: 4.79,
+				}
+			}
 		});
 	}
 }

@@ -138,6 +138,40 @@
 
 	.general__image {
 		min-height: 350px;
-    object-fit: cover;
+		object-fit: cover;
+	}
+
+	.general-block {
+		padding: 0 24px 0 24px;
+	}
+
+	.general-block__wrapper {
+		padding: 56px 0 39px 43px;
+	}
+
+	.general__polygon-banner {
+		width: 115px;
+		height: 50px;
+	}
+
+	.general__group {
+		margin: 16px 0 56px 0;
+	}
+
+	.general__cursor-banner {
+		height: 50px;
+	}
+
+	.general-block__wrapper {
+		width: 100%;
+	}
+
+	.general__block {
+		left: -104px;
+	}
+
+	.general__value {
+		font-size: 24px;
+		line-height: 24px;
 	}
 }

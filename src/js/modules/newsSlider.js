@@ -14,12 +14,12 @@ export default function newsSlider() {
 			loop: false,
 
 			breakpoints: {
-				1439: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
 				},
 				1440: {
-					slidesPerView: 3,
+					slidesPerView: 4,
 					spaceBetween: 30,
 				}
 			},

@@ -46,3 +46,9 @@
 		z-index: -1;
 	}
 }
+
+@media (max-width: 1440px) {
+	.gallery-block__scrollbar.swiper-scrollbar {
+		margin: 20px auto 50px auto;
+	}
+}

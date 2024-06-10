@@ -76,3 +76,32 @@
 		}
 	}
 }
+
+@media (max-width: 1440px) {
+	.partners__container {
+		padding: 0 102px 0 102px;
+	}
+
+	.partners__group {
+		max-width: 564px;
+		position: static;
+	}
+
+	.partners__slide.swiper-slide {
+		height: 110px !important;
+	}
+
+	.partners {
+		padding: 40px 0 35px 0;
+	}
+
+	.partners__group-button.partners__group-button-next {
+		right: 21px;
+		top: 44%;
+	}
+
+	.partners__group-button.partners__group-button-prev {
+		left: 19px;
+		top: 46%;
+	}
+}
