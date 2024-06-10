@@ -18,7 +18,18 @@
 	line-height: 14px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 767px) {
+	.footer__wrapper {
+		flex-direction: column;
+		padding: 20px 15px 0 15px;
+	}
+
+	.footer__author {
+		margin: 15px 0 0 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
 	.footer__wrapper {
 		padding: 17px 24px 17px 24px;
 	}

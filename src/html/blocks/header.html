@@ -1,11 +1,13 @@
 <header class="header">
     <nav class="header__nav">
         <div class="container menu">
+            
             <div class="menu__contacts">
 
                 <ul class="menu__contacts-list">
+                    <li class='menu__contacts-item menu__contacts-item-burger'></li>
 
-                    <li class="menu__contacts-item">
+                    <li class="menu__contacts-item menu__contacts-item-address">
                         <svg class="menu__icon">
                             <use href="./img/svgsprite/sprite.symbol.svg#icon__place"></use>
                         </svg>
@@ -15,18 +17,18 @@
                     </li>
 
                     <li class="menu__contacts-item">
-                        <svg class="menu__icon">
+                        <svg class="menu__icon menu__icon-phone">
                             <use href="./img/svgsprite/sprite.symbol.svg#icon__phone"></use>
                         </svg>
                         <a class="menu__contacts-link" href="tel:+74162777806" aria-label="Телефон">8 (4162) 77 78 06
                         </a>
                     </li>
 
-                    <li class="menu__contacts-item">
-                        <a class="menu__contacts-link"
-                            href="mailto:aodnt@yandex.ru.ru"
+                    <li class="menu__contacts-item menu__contacts-item-phone">
+                        <a class="menu__contacts-link" href="mailto:aodnt@yandex.ru.ru"
                             aria-label="Почта">aodnt@yandex.ru</a>
                     </li>
+
                 </ul>
 
                 <ul class="menu__contacts-items">
@@ -41,7 +43,8 @@
                     </li>
 
                     <li class="menu__contacts-point menu__contacts-search">
-                        <button class="menu__contacts-button menu__contacts-button--background" title="Поиск по сайту" aria-label="Поиск по сайту" data-action="search">
+                        <button class="menu__contacts-button menu__contacts-button--background" title="Поиск по сайту"
+                            aria-label="Поиск по сайту" data-action="search">
                             <svg class="menu__icon menu__icon-search">
                                 <use href="./img/svgsprite/sprite.symbol.svg#icon__search"></use>
                             </svg>
@@ -49,9 +52,10 @@
 
                         <div class='menu__search'>
                             <form class='menu__form' action="/search" id='top-form' method="GET" name='search__header'>
-                                <input class='menu__input' type="text" aria-label='Поиск' id='search-form' placeholder='Поиск' name="query">
+                                <input class='menu__input' type="text" aria-label='Поиск' id='search-form'
+                                    placeholder='Поиск' name="query">
                                 <label class='menu__label visually-hidden' for='search-form'>Поиск по сайту</label>
-                                
+
                                 <ul class='menu__group'>
                                     <li class="menu__group-item">
                                         <button class='menu__delete' type='button' aria-label='Удаление'>
@@ -60,7 +64,7 @@
                                             </svg>
                                         </button>
                                     </li>
-                        
+
                                     <li class="menu__group-item">
                                         <button class='menu__search-button' type='submit' aria-label='Отправка'>
                                             <svg class="menu__search-svg">
@@ -71,9 +75,10 @@
                                 </ul>
                             </form>
                         </div>
-                        
+
                     </li>
                 </ul>
+                <aside class='burger__wrapper'></aside>
             </div>
         </div>
     </nav>
@@ -81,10 +86,12 @@
     <div class="header__inner container">
         <ul class="header__bottom menu">
             <li class="menu__wrapper burger">
-                <button class="burger__button" type="button" aria-label="Мобильное меню" data-action="click">
-                    <span class="burger__toggle"></span>
-                </button>
-                <aside class='burger__wrapper'></aside>
+                <div class='burger__box' data-da=".menu__contacts-item-burger, 767, 1">
+                    <button class="burger__button" type="button" aria-label="Мобильное меню" data-action="click">
+                        <span class="burger__toggle"></span>
+                    </button>
+                </div>
+                
             </li>
 
             <li class="menu__picture">
@@ -104,7 +111,7 @@
             </li>
         </ul>
 
-        <div class="header__center dropdown">
+        <div class="header__center dropdown" data-da=".burger__wrapper, 767, 1">
             <div class='dropdown__wrapper'>
                 <button class="dropdown__name" type='button' aria-label='События' data-action="dropdown">События
                     <svg class="dropdown__svg">
@@ -114,7 +121,7 @@
 
                 <ul class="dropdown__list" data-action="dropdown__visible">
                     <li class="dropdown__item">
-                        <a class="dropdown__link" href="/" aria-label="Афиша">Афиша</a>
+                        <a class="dropdown__link dropdown__link-heading" href="/" aria-label="Афиша">Афиша</a>
                     </li>
 
                     <li class="dropdown__item">
@@ -143,7 +150,7 @@
 
                 <ul class="dropdown__list" data-action="dropdown__visible">
                     <li class="dropdown__item">
-                        <a class="dropdown__link" href="/" aria-label="Афиша">Афиша</a>
+                        <a class="dropdown__link dropdown__link-heading" href="/" aria-label="Афиша">Афиша</a>
                     </li>
 
                     <li class="dropdown__item">
@@ -172,7 +179,7 @@
 
                 <ul class="dropdown__list" data-action="dropdown__visible">
                     <li class="dropdown__item">
-                        <a class="dropdown__link" href="/" aria-label="Афиша">Афиша</a>
+                        <a class="dropdown__link dropdown__link-heading" href="/" aria-label="Афиша">Афиша</a>
                     </li>
 
                     <li class="dropdown__item">
@@ -193,32 +200,32 @@
             </div>
         </div>
 
-     <div class='header__social social'>
-        <ul class='social__list'>
-            <li class="social__item">
-                <a class='social__link' href="/">
-                    <svg class="social__svg">
-                        <use href="./img/svgsprite/sprite.symbol.svg#icon__rutube-new"></use>
-                    </svg>
-                </a>
-            </li>
+        <div class='header__social social'>
+            <ul class='social__list'>
+                <li class="social__item">
+                    <a class='social__link' href="/">
+                        <svg class="social__svg">
+                            <use href="./img/svgsprite/sprite.symbol.svg#icon__rutube-new"></use>
+                        </svg>
+                    </a>
+                </li>
 
-            <li class="social__item">
-                <a class='social__link' href="/">
-                    <svg class="social__svg">
-                        <use href="./img/svgsprite/sprite.symbol.svg#icon__youtube-new"></use>
-                    </svg>
-                </a>
-            </li>
+                <li class="social__item">
+                    <a class='social__link' href="/">
+                        <svg class="social__svg">
+                            <use href="./img/svgsprite/sprite.symbol.svg#icon__youtube-new"></use>
+                        </svg>
+                    </a>
+                </li>
 
-            <li class="social__item">
-                <a class='social__link' href="/">
-                    <svg class="social__svg social__svg-vk">
-                        <use href="./img/svgsprite/sprite.symbol.svg#icon__vk"></use>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-     </div>
+                <li class="social__item">
+                    <a class='social__link' href="/">
+                        <svg class="social__svg social__svg-vk">
+                            <use href="./img/svgsprite/sprite.symbol.svg#icon__vk"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>

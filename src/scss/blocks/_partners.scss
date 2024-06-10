@@ -77,7 +77,7 @@
 	}
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1440px) {
 	.partners__container {
 		padding: 0 102px 0 102px;
 	}

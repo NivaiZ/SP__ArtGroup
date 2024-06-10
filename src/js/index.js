@@ -1,5 +1,6 @@
 import burgerMenu from './modules/burger'
 import dropDownMenu from './modules/dropdown'
+import useDynamicAdapt from './modules/dynamic-adapt'
 import gallerySlider from './modules/gallerySlider'
 import newsSlider from './modules/newsSlider'
 import partnersSlider from './modules/partnersSlider'
@@ -14,7 +15,7 @@ function handleDOMContentLoaded() {
 	newsSlider();
 	gallerySlider();
 	partnersSlider();
-	// useDynamicAdapt("max")
+	useDynamicAdapt("max");
 }
 
 document.addEventListener('DOMContentLoaded', handleDOMContentLoaded)

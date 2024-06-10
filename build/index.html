@@ -20,7 +20,9 @@
 				<div class="container menu">
 					<div class="menu__contacts">
 						<ul class="menu__contacts-list">
-							<li class="menu__contacts-item">
+							<li class="menu__contacts-item menu__contacts-item-burger"></li>
+
+							<li class="menu__contacts-item menu__contacts-item-address">
 								<svg class="menu__icon">
 									<use href="./img/svgsprite/sprite.symbol.svg#icon__place"></use>
 								</svg>
@@ -30,13 +32,13 @@
 							</li>
 
 							<li class="menu__contacts-item">
-								<svg class="menu__icon">
+								<svg class="menu__icon menu__icon-phone">
 									<use href="./img/svgsprite/sprite.symbol.svg#icon__phone"></use>
 								</svg>
 								<a class="menu__contacts-link" href="tel:+74162777806" aria-label="Телефон">8 (4162) 77 78 06 </a>
 							</li>
 
-							<li class="menu__contacts-item">
+							<li class="menu__contacts-item menu__contacts-item-phone">
 								<a class="menu__contacts-link" href="mailto:aodnt@yandex.ru.ru" aria-label="Почта">aodnt@yandex.ru</a>
 							</li>
 						</ul>
@@ -83,6 +85,7 @@
 								</div>
 							</li>
 						</ul>
+						<aside class="burger__wrapper"></aside>
 					</div>
 				</div>
 			</nav>
@@ -90,10 +93,11 @@
 			<div class="header__inner container">
 				<ul class="header__bottom menu">
 					<li class="menu__wrapper burger">
-						<button class="burger__button" type="button" aria-label="Мобильное меню" data-action="click">
-							<span class="burger__toggle"></span>
-						</button>
-						<aside class="burger__wrapper"></aside>
+						<div class="burger__box" data-da=".menu__contacts-item-burger, 767, 1">
+							<button class="burger__button" type="button" aria-label="Мобильное меню" data-action="click">
+								<span class="burger__toggle"></span>
+							</button>
+						</div>
 					</li>
 
 					<li class="menu__picture">
@@ -113,7 +117,7 @@
 					</li>
 				</ul>
 
-				<div class="header__center dropdown">
+				<div class="header__center dropdown" data-da=".burger__wrapper, 767, 1">
 					<div class="dropdown__wrapper">
 						<button class="dropdown__name" type="button" aria-label="События" data-action="dropdown">
 							События
@@ -124,7 +128,7 @@
 
 						<ul class="dropdown__list" data-action="dropdown__visible">
 							<li class="dropdown__item">
-								<a class="dropdown__link" href="/" aria-label="Афиша">Афиша</a>
+								<a class="dropdown__link dropdown__link-heading" href="/" aria-label="Афиша">Афиша</a>
 							</li>
 
 							<li class="dropdown__item">
@@ -151,7 +155,7 @@
 
 						<ul class="dropdown__list" data-action="dropdown__visible">
 							<li class="dropdown__item">
-								<a class="dropdown__link" href="/" aria-label="Афиша">Афиша</a>
+								<a class="dropdown__link dropdown__link-heading" href="/" aria-label="Афиша">Афиша</a>
 							</li>
 
 							<li class="dropdown__item">
@@ -178,7 +182,7 @@
 
 						<ul class="dropdown__list" data-action="dropdown__visible">
 							<li class="dropdown__item">
-								<a class="dropdown__link" href="/" aria-label="Афиша">Афиша</a>
+								<a class="dropdown__link dropdown__link-heading" href="/" aria-label="Афиша">Афиша</a>
 							</li>
 
 							<li class="dropdown__item">
@@ -270,7 +274,7 @@
 			<section class="poster">
 				<div class="poster__container container">
 					<div class="poster__wrapper">
-						<a class="poster__phone" href="tel:+74162777806" aria-label="Телефон"
+						<a class="poster__phone" href="tel:+74162777806" aria-label="Телефон" data-da=".poster__mobile, 767, 1"
 							>8 (4162) 77 78 06
 							<span class="poster__sign">(касса) </span>
 						</a>
@@ -278,7 +282,7 @@
 
 						<a class="poster__link" href="/" aria-label="Смотреть всё">Смотреть всё</a>
 					</div>
-
+					<div class="poster__mobile"></div>
 					<div class="poster__article">
 						<article class="poster__card">
 							<strong class="poster__pegi">6+</strong>

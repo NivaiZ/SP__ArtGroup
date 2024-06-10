@@ -114,7 +114,17 @@
 	padding: 80px 0 45px 0;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 767px) {
+	.news__heading {
+		margin-left: 0;
+	}
+
+	.news__empty {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
 	.swiper.news__slider {
 		padding: 0 24px 0 24px;
 	}

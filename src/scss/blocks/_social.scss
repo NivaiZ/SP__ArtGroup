@@ -24,3 +24,13 @@
 .social__svg-vk {
 	fill: var(--icon-vk);
 }
+
+@media (max-width: 767px) {
+	.social__svg {
+		width: 24px;
+		height: 24px;
+	}
+	.social__item {
+		margin-right: 15px;
+	}
+}

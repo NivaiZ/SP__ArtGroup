@@ -14,6 +14,10 @@ export default function newsSlider() {
 			loop: false,
 
 			breakpoints: {
+				320: {
+					slidesPerView: 1.5,
+					spaceBetween: 20,
+				},
 				768: {
 					slidesPerView: 3,
 					spaceBetween: 20,
