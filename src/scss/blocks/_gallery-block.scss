@@ -47,6 +47,21 @@
 	}
 }
 
+@media (max-width: 767px) {
+	.gallery-block__slider {
+		padding: 0 0 0 10px !important;
+	}
+
+	.gallery-block__img {
+		height: 110px;
+	}
+
+	.gallery-block__scrollbar.swiper-scrollbar {
+		margin: 22px auto 23px auto;
+	}
+	
+}
+
 @media (min-width: 768px) and (max-width: 1440px) {
 	.gallery-block__scrollbar.swiper-scrollbar {
 		margin: 20px auto 50px auto;

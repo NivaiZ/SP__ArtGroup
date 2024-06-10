@@ -12,6 +12,7 @@ export default function partnersSlider() {
       breakpoints: {
         320: {
           slidesPerView: 2,
+          spaceBetween: 8,
           grid: {
             rows: 2,
             fill: "row",

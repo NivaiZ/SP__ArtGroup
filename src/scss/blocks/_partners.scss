@@ -78,16 +78,40 @@
 }
 
 @media (max-width: 767px) {
-	.partners__slider {
-		padding: 0 10px 0 10px !important;
+	.partners {
+		padding: 20px 30px 30px 30px;
 	}
 
 	.partners__group-button-next {
-		position: static;
+		right: -23px;
 	}
 
 	.partners__group-button-prev {
-		position: static;
+		left: -24px;
+	}
+
+	.partners__slide.swiper-slide {
+		height: 52px !important;
+
+		&:nth-child(3) {
+			order: 3;
+		}
+
+		&:nth-child(4) {
+			order: 4;
+		}
+	}
+
+	.partners__group {
+		top: 42%;
+	}
+
+	.partners__wrapper {
+		align-items: flex-end;
+	}
+
+	.partners__figure {
+		padding: 15px;
 	}
 }
 
