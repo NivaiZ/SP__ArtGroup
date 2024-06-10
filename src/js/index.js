@@ -5,6 +5,7 @@ import gallerySlider from './modules/gallerySlider'
 import newsSlider from './modules/newsSlider'
 import partnersSlider from './modules/partnersSlider'
 import hoverPosterCard from './modules/posterCard'
+import posterSlider from './modules/posterSlider'
 import searchModal from './modules/search'
 
 function handleDOMContentLoaded() {
@@ -15,6 +16,7 @@ function handleDOMContentLoaded() {
 	newsSlider();
 	gallerySlider();
 	partnersSlider();
+	posterSlider();
 	useDynamicAdapt("max");
 }
 

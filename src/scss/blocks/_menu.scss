@@ -218,10 +218,13 @@
 }
 
 @media (max-width: 767px) {
+	.menu__name {
+		width: unset;
+	}
 
 	.menu__contacts-button--background {
-		width: 42px;
-		clip-path: polygon(0% 0%, 100% 0%, 100% 25px, 31px 100%, 0 100%);
+		width: 56px;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 25px, 48px 100%, 0 100%);
 	}
 
 	.menu__contacts-item-phone {
@@ -250,8 +253,9 @@
 	}
 
 	.menu__contacts-link {
-		font-size: 13px;
-		line-height: 13px;
+		font-size: 12px;
+		line-height: 12px;
+		margin-left: 8px;
 	}
 
 	.menu__picture {
@@ -260,10 +264,12 @@
 
 	.menu__polygon--left {
 		width: 103px;
-		padding: 20px 0 20px 0;
+		height: 42px;
+		padding: 0 20px 0 20px;
 	}
 
 	.menu__polygon--right {
 		width: 51px;
+		height: 50px;
 	}
 }

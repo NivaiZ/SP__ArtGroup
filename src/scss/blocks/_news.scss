@@ -115,12 +115,32 @@
 }
 
 @media (max-width: 767px) {
+	.news {
+		margin: 13px 0 0 0;
+	}
+
 	.news__heading {
 		margin-left: 0;
 	}
 
 	.news__empty {
 		display: none;
+	}
+
+	.news__inner-gallery {
+		padding: 20px 10px 20px 10px;
+	}
+
+	.news__inner {
+		padding: 30px 10px 20px 10px;
+	}
+
+	.news__box {
+		padding: 0 10px 0 10px;
+	}
+
+	.news__wrapper {
+		padding: 24px 24px 26px 24px;
 	}
 }
 

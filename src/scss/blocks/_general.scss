@@ -124,7 +124,7 @@
 	}
 
 	.general-block__wrapper {
-		padding: 30px 20px 25px 20px;
+		padding: 30px 0px 25px 40px;
 	}
 
 	.general__image {
@@ -132,6 +132,7 @@
 		width: 223px;
 		height: 223px;
 		object-fit: cover;
+		clip-path: polygon(86px 0%, 100% 0, 100% 100%, 0 100%, 0 47px);
 	}
 
 	.general__picture {
@@ -144,11 +145,32 @@
 		width: 168px;
 		height: 123px;
 		left: 0;
+		top: 44%;
 	}
 
 	.general__value {
 		width: 128px;
 		height: 84px;
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	.general-block {
+		padding: 0 10px 0 10px;
+	}
+
+	.general__group {
+		margin: 24px 0 17px 0;
+	}
+
+	.general__polygon-banner {
+		margin-left: 17px;
+		width: 128px;
+	}
+
+	.general__cursor-banner {
+		width: 58px;
+		height: 50px;
 	}
 }
 
