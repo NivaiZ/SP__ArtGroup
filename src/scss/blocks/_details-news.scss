@@ -1,0 +1,20 @@
+.details-news__titles {
+	margin: 40px 0 32px 0;
+
+	.title__h1 {
+		line-height: 42px;
+		font-weight: 800;
+		white-space: pre-wrap;
+	}
+}
+
+.details-news__text {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+
+	a {
+		color: var(--basic-red);
+		text-decoration: underline;
+	}
+}

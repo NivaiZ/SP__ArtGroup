@@ -52,7 +52,5 @@ export default function posterSlider() {
 			}
 			swiperInstance = initSwiper()
 		})
-	} else {
-		console.error('Element with the specified selector was not found.')
 	}
 }
