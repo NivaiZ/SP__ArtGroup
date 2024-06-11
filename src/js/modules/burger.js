@@ -1,4 +1,4 @@
-import toggleBodyClass from './toggleBodyClass';
+import toggleBodyClass from './toggleBodyClass'
 
 export default function burgerMenu() {
 	const burgerButton = document.querySelector('[data-action="click"]');
@@ -6,7 +6,7 @@ export default function burgerMenu() {
 
 	if (burgerButton) {
 			burgerButton.addEventListener('click', (event) => {
-					event.stopPropagation(); // Предотвращаем всплытие события
+					event.stopPropagation();
 					toggleBurgerMenu();
 			});
 

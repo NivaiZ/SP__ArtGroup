@@ -16,8 +16,6 @@ export default function hoverPosterCard() {
 			elementClose.addEventListener('click', () => {
 				elementPoster.classList.remove('poster__visible')
 			})
-
 		}
-
 	}
 }

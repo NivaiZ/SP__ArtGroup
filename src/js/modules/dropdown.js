@@ -48,9 +48,7 @@ export default function dropDownMenu() {
     }
   };
 
-  // Initial check
   handleResize();
 
-  // Check on resize
   window.addEventListener('resize', handleResize);
 }
