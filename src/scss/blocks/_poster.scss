@@ -28,6 +28,7 @@
 
 .poster__sign {
 	color: var(--gray);
+	margin-left: 5px;
 }
 
 .poster__card {
@@ -125,6 +126,7 @@
 			100% 0);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	padding: 32px 19px 0 24px;
+	overflow: auto;
 }
 
 .poster__event {
@@ -184,6 +186,17 @@
 	}
 }
 
+.poster__svg-phone {
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+}
+
+.poster__phone--flex {
+	display: flex;
+	align-items: center;
+}
+
 @media (max-width: 767px) {
 
 	.poster__container {
@@ -193,19 +206,16 @@
 	}
 
 	.poster__wrapper {
-		padding: 40px 0px 20px 0px;
+		padding: 40px 0px 10px 0px;
 	}
 
 	.poster__article {
 		display: flex;
+		// width: 100vh;
 	}
 
 	.poster__heading {
 		margin-right: 0;
-	}
-
-	.poster__mobile {
-		padding: 0px 10px 12px 0px;
 	}
 
 	.poster__name {
@@ -240,18 +250,13 @@
 	.poster__name-extra {
 		gap: 50px;
 	}
-
-	.poster__svg-phone {
-		width: 16px;
-		height: 16px;
-	}
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
 	.poster__article {
 		display: flex;
 		gap: unset;
-		width: 100vh;
+		// width: 100vh;
 		padding: 0 24px 0 24px;
 		// overflow-y: hidden;
 		// overflow-x: scroll;
@@ -275,7 +280,7 @@
 
 	.poster__card {
 		margin-right: 20px;
-		max-width: 227px;
+		// max-width: 227px;
 
 		&:last-child {
 			margin-right: 0;
@@ -303,5 +308,36 @@
 
 	.poster__strong {
 		margin: 0 0 0 13px;
+	}
+
+	.poster__article.swiper {
+		padding: 0 10px 0 10px;
+	}
+}
+
+@media (max-width: 1439px) {
+	.poster__scrollbar.swiper-scrollbar {
+		display: flex;
+	}
+
+	.poster__mobile {
+		padding: 10px 0 18px 0;
+	}
+}
+
+@media (min-width: 1440px) {
+	.poster__inner.swiper-wrapper {
+		display: grid;
+		grid-template-columns: minmax(270px, max-content) repeat(auto-fill, 270px);
+		gap: 30px;
+		box-sizing: unset;
+		transform: unset;
+		transition-property: unset;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.poster__scrollbar.swiper-scrollbar {
+		display: none;
 	}
 }

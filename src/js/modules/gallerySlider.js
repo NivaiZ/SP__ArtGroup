@@ -22,7 +22,7 @@ export default function gallerySlider () {
 						fill: "row",
 					},
 				},
-				1440: {
+				1439: {
 					slidesPerView: 4.79,
 				}
 			}

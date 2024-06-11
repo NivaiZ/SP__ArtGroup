@@ -1,8 +1,8 @@
-import Swiper from "swiper/bundle"
-import "swiper/css/bundle"
+import Swiper from 'swiper/bundle'
+import 'swiper/css/bundle'
 
 export default function posterSlider() {
-	const swiperExist = document.querySelector(".poster__article")
+	const swiperExist = document.querySelector('.poster__article')
 
 	if (swiperExist) {
 		function initSwiper() {
@@ -19,17 +19,21 @@ export default function posterSlider() {
 							slidesPerView: 1.3,
 							spaceBetween: 20,
 						},
+						450: {
+							slidesPerView: 1.99,
+							spaceBetween: 20,
+						},
 						768: {
 							slidesPerView: 3,
 							spaceBetween: 20,
 						},
-						1440: {
+						1439: {
 							slidesPerView: 4,
 							spaceBetween: 30,
-						}
+						},
 					},
 					scrollbar: {
-						el: ".poster__scrollbar.swiper-scrollbar",
+						el: '.poster__scrollbar.swiper-scrollbar',
 						dragSize: 1,
 						draggable: true,
 						snapOnRelease: true,
@@ -41,7 +45,7 @@ export default function posterSlider() {
 
 		let swiperInstance = initSwiper()
 
-		window.addEventListener("resize", function () {
+		window.addEventListener('resize', function () {
 			if (swiperInstance) {
 				swiperInstance.destroy(true, true)
 				swiperInstance = null
@@ -49,6 +53,6 @@ export default function posterSlider() {
 			swiperInstance = initSwiper()
 		})
 	} else {
-		console.error("Element with the specified selector was not found.")
+		console.error('Element with the specified selector was not found.')
 	}
 }

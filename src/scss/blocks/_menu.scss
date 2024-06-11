@@ -124,7 +124,7 @@
 	left: 0;
 	top: 0;
 	background-color: var(--page-bg);
-	z-index: 1;
+	z-index: 4;
 }
 
 .menu__input {
@@ -191,7 +191,28 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+.menu__contacts-item-burger {
+	display: none;
+}
+
+@media (max-width: 767px) {
+	.menu__contacts-item-burger {
+		display: flex;
+	}
+
+	.menu__form {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.menu__input {
+		width: 87%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
 	.menu__contacts {
 		padding: 0 24px 0 24px;
 	}

@@ -3,19 +3,20 @@
 
 		<div class='poster__wrapper'>
 
-			<a class="poster__phone" href="tel:+74162777806" aria-label="Телефон" data-da=".poster__mobile, 767, 1">8 (4162)
-				77 78 06
+			<a class="poster__phone poster__phone--flex" href="tel:+74162777806" aria-label="Телефон" data-da=".poster__mobile, 1439, 1">
+				<svg class="poster__svg poster__svg-phone">
+					<use href="./img/svgsprite/sprite.symbol.svg#icon__phone"></use>
+				</svg>
+				8 (4162)77 78 06
 				<span class='poster__sign'>(касса)</span>
 			</a>
+
 			<h2 class='poster__heading title__h2'>Афиша</h2>
 
 			<a class='poster__link' href="/" aria-label="Смотреть всё">Смотреть всё</a>
 		</div>
-		<div class='poster__mobile'>
-			<svg class="poster__svg poster__svg-phone">
-				<use href="./img/svgsprite/sprite.symbol.svg#icon__phone"></use>
-			</svg>
-		</div>
+
+		<div class='poster__mobile'></div>
 
 		<div class='poster__article swiper'>
 			<div class='poster__inner swiper-wrapper'>
@@ -32,7 +33,7 @@
 					</div>
 
 					<div class='poster__general general'>
-						<a class="general__link" href="/" target="_blank">
+						<a class="general__link" href="/" target="_blank" aria-label='Подробнее'>
 							<div class="general__polygon general__polygon-poster">
 								<span class="general__sign">подробнее</span>
 							</div>
@@ -58,7 +59,7 @@
 					</div>
 
 					<div class='poster__general general'>
-						<a class="general__link" href="/" target="_blank">
+						<a class="general__link" href="/" target="_blank" aria-label='Подробнее'>
 							<div class="general__polygon general__polygon-poster">
 								<span class="general__sign">подробнее</span>
 							</div>
@@ -69,49 +70,130 @@
 								</svg>
 							</div>
 						</a>
-						<button class='general__calendar' type='button' data-action="calendar">
+
+						<button class='general__calendar' type='button' data-action="calendar" aria-label='Выбор сеанса'>
 							<svg class="general__svg">
 								<use href="./img/svgsprite/sprite.symbol.svg#icon__calendar"></use>
 							</svg>
 						</button>
+
 					</div>
 
 					<div class='poster__background schedule'>
 						<span class='poster__event'>К/ф «Маленькие волшебницы»</span>
 						<form class='schedule__form' action="/" id='schedule-time' method='post' name='schedule-form__wizards'>
+
 							<fieldset class='schedule__fieldset'>
 								<legend class='schedule__legend'>26.01.2021</legend>
 
 								<span class='schedule__span'>
-									<input class='schedule__input visually-hidden' type="radio" value='2021-01-01T11:50' id='time__one'
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-26T11:50' id='time__one--[26.01]'
 										name='schedule'>
-									<label class='schedule__label' for='time__one'>
+									<label class='schedule__label' for='time__one--[26.01]'>
 										11:50
 									</label>
 
 								</span>
 
 								<span class='schedule__span'>
-									<input class='schedule__input visually-hidden' type="radio" value='2021-01-01T14:10' id='time__two'
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-26T14:10' id='time__two--[26.01]'
 										name='schedule'>
-									<label class='schedule__label' for='time__two'>
+									<label class='schedule__label' for='time__two--[26.01]'>
 										14:10
 									</label>
 								</span>
 
 								<span class='schedule__span'>
-									<input class='schedule__input visually-hidden' type="radio" value='2021-01-01T19:10' name='schedule'
-										id='time__three'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-26T19:10' name='schedule'
+										id='time__three--[26.01]'>
 
-									<label class='schedule__label' for='time__three'>
+									<label class='schedule__label' for='time__three--[26.01]'>
 										19:10
 									</label>
 								</span>
 
 								<span class='schedule__span'>
-									<input class='schedule__input visually-hidden' type="radio" value='2021-01-01T20:40' name='schedule'
-										id='time__four'>
-									<label class='schedule__label' for='time__four'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-26T20:40' name='schedule'
+										id='time__four--[26.01]'>
+									<label class='schedule__label' for='time__four--[26.01]'>
+										20:40
+									</label>
+
+								</span>
+							</fieldset>
+
+							<fieldset class='schedule__fieldset'>
+								<legend class='schedule__legend'>27.01.2021</legend>
+
+								<span class='schedule__span'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-27T11:50' id='time__one--[27.01]'
+										name='schedule'>
+									<label class='schedule__label' for='time__one--[27.01]'>
+										11:50
+									</label>
+
+								</span>
+
+								<span class='schedule__span'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-27T14:10' id='time__two--[27.01]'
+										name='schedule'>
+									<label class='schedule__label' for='time__two--[27.01]'>
+										14:10
+									</label>
+								</span>
+
+								<span class='schedule__span'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-27T19:10' name='schedule'
+										id='time__three--[27.01]'>
+
+									<label class='schedule__label' for='time__three--[27.01]'>
+										19:10
+									</label>
+								</span>
+
+								<span class='schedule__span'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-27T20:40' name='schedule'
+										id='time__four--[27.01]'>
+									<label class='schedule__label' for='time__four--[27.01]'>
+										20:40
+									</label>
+
+								</span>
+							</fieldset>
+
+							<fieldset class='schedule__fieldset'>
+								<legend class='schedule__legend'>28.01.2021</legend>
+
+								<span class='schedule__span'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-28T11:50' id='time__one--[28.01]'
+										name='schedule'>
+									<label class='schedule__label' for='time__one--[28.01]'>
+										11:50
+									</label>
+
+								</span>
+
+								<span class='schedule__span'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-28T14:10' id='time__two--[28.01]'
+										name='schedule'>
+									<label class='schedule__label' for='time__two--[28.01]'>
+										14:10
+									</label>
+								</span>
+
+								<span class='schedule__span'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-28T19:10' name='schedule'
+										id='time__three--[28.01]'>
+
+									<label class='schedule__label' for='time__three--[28.01]'>
+										19:10
+									</label>
+								</span>
+
+								<span class='schedule__span'>
+									<input class='schedule__input visually-hidden' type="radio" value='2021-01-28T20:40' name='schedule'
+										id='time__four--[28.01]'>
+									<label class='schedule__label' for='time__four--[28.01]'>
 										20:40
 									</label>
 
@@ -143,7 +225,7 @@
 
 
 					<div class='poster__general general'>
-						<a class="general__link" href="/" target="_blank">
+						<a class="general__link" href="/" target="_blank" aria-label='Подробнее'>
 							<div class="general__polygon general__polygon-poster">
 								<span class="general__sign">подробнее</span>
 							</div>
@@ -170,7 +252,7 @@
 
 
 					<div class='poster__general general'>
-						<a class="general__link" href="/" target="_blank">
+						<a class="general__link" href="/" target="_blank" aria-label='Подробнее'>
 							<div class="general__polygon general__polygon-poster">
 								<span class="general__sign">подробнее</span>
 							</div>

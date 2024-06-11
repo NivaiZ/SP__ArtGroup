@@ -19,7 +19,7 @@ export default function partnersSlider() {
           },
         },
 
-        1440: {
+        1439: {
           slidesPerView: 4,
         },
       },

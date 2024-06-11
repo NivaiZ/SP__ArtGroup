@@ -18,14 +18,18 @@ export default function newsSlider() {
 					slidesPerView: 1.4,
 					spaceBetween: 20,
 				},
-				768: {
+				450: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				650: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1440: {
+				992: {
 					slidesPerView: 4,
 					spaceBetween: 30,
-				}
+				},
 			},
 			scrollbar: {
 				el: ".news__scrollbar.swiper-scrollbar",

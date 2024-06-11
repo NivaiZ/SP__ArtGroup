@@ -1,5 +1,5 @@
 .partners {
-	padding: 50px 0 50px 0;
+	padding: 62px 0 59px 0;
 	background-color: var(--page-bg);
 }
 
@@ -9,6 +9,7 @@
 
 .partners__img {
 	width: auto;
+	object-fit: contain;
 }
 
 .partners__link {
@@ -52,12 +53,14 @@
 
 .partners__group-button-next {
 	transform: rotate(180deg);
-	right: -40px;
+	right: -35px;
+	top: -16px;
 	position: absolute;
 }
 
 .partners__group-button-prev {
-	left: -40px;
+	left: -35px;
+	top: -11px;
 	position: absolute;
 }
 
@@ -103,7 +106,7 @@
 	}
 
 	.partners__group {
-		top: 42%;
+		top: 60%;
 	}
 
 	.partners__wrapper {
@@ -111,11 +114,12 @@
 	}
 
 	.partners__figure {
-		padding: 15px;
+		padding: 5px 0 5px 0;
+		height: 60%;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1439px) {
 	.partners__container {
 		padding: 0 102px 0 102px;
 	}
