@@ -18,3 +18,137 @@
 		text-decoration: underline;
 	}
 }
+
+.details-news__prev {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--text-color);
+	width: 177px;
+	padding: 14px 0 12px 0;
+	clip-path: polygon(20px 0%, 100% 0, 100% 100%, 0 100%, 0% 7px);
+	transition: 0.5s ease;
+
+	&:hover {
+		background-color: var(--basic-red);
+	}
+}
+
+.details-news__description {
+	font-size: 14px;
+	line-height: 14px;
+	color: var(--page-bg);
+	text-transform: uppercase;
+}
+
+.details-news__svg {
+	width: 10px;
+	height: 6px;
+	fill: var(--page-bg);
+	transform: rotate(90deg);
+	margin: 0 5px 0 0;
+}
+
+.details-news__link {
+	margin: 32px 0 40px 0;
+}
+
+.details-news__svg-download {
+	width: 48px;
+	height: 48px;
+	fill: var(--page-bg);
+}
+
+.details-news__logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+	height: 170px;
+	background-color: var(--text-color);
+	clip-path: polygon(calc(100% - 26px) 0%, 100% 9px, 100% 100%, 0 100%, 0 0);
+}
+
+.details-news__box {
+	padding: 24px 30px 24px 30px;
+	background-color: var(--page-bg);
+	clip-path: polygon(2% 0, 0 7%, 0 47%, 0 100%, 100% 100%, 100% 0);
+}
+
+.details-news__docs {
+	display: flex;
+}
+
+.details-news__flex {
+	display: flex;
+	align-items: center;
+	margin: 16px 0 0 0;
+}
+
+.details-news__download {
+	display: flex;
+	justify-content: center;
+	background-color: var(--text-color);
+	width: 108px;
+	clip-path: polygon(20px 0%, 100% 0, 100% 100%, 0 100%, 0% 7px);
+	text-transform: uppercase;
+	transition: 0.5s ease;
+
+	&:hover {
+		background-color: var(--basic-red);
+	}
+}
+
+.details-news__span {
+	display: block;
+	font-size: 14px;
+	line-height: 14px;
+	color: var(--page-bg);
+	padding: 16px 0 14px 0;
+}
+
+.details-news__size {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-left: 30px;
+}
+
+.details-news__strong {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.details-news__heading {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 900;
+}
+
+.details-news__title {
+	margin: 32px 0 40px 0;
+}
+
+.details-news__poster {
+	width: 87%;
+	margin-left: 5px;
+}
+
+.details-news__text-flex {
+	display: flex;
+
+	div {
+		width: 92%;
+	}
+}
+
+.details-news__text-flex {
+	margin: 32px 0 40px 0;
+}
+
+.details-news__img {
+	clip-path: polygon(calc(100% - 26px) 0%, 100% 9px, 100% 100%, 0 100%, 0 0);
+}
